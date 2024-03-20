@@ -9,7 +9,7 @@
     <h3>The user id is : <%= chat._id %></h3>
     <p>user name is ; <%= chat.name %></p>
     <form method="POST" action="/chats/<%= chat._id %>?_method=PUT" >
-        <input type="text" value="<%= chat.name %>"> 
+        <!-- <input type="text" value="<%= chat.name %>">  -->
         <textarea name="name" ><%= chat.name %></textarea>
         <textarea name="email" ><%= chat.email %></textarea>
         <textarea name="phone" ><%= chat.phone %></textarea>

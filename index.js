@@ -61,7 +61,7 @@ app.get("/chats/edit/:id", async (req, res) => {
 })
 
 //UPDATE ROUTE
-app.put("/chats/:id", async(req, res) => {
+app.put("/chats/:id", async (req, res) => {
     let { id } = req.params;
     let { name, email, phone, password } = req.body;
     console.log(name);
@@ -70,8 +70,8 @@ app.put("/chats/:id", async(req, res) => {
     res.redirect("/chats");
 })
 
-app.delete("/chats/:id", async(req, res)=>{
-    let {id} = req.params;
+app.delete("/chats/:id", async (req, res) => {
+    let { id } = req.params;
     let deleteChat = await Chat.findByIdAndDelete(id);
     console.log(deleteChat);
     res.redirect("/chats");
