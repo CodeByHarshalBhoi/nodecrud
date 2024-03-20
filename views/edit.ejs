@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Data</title>
+</head>
+<body>
+    <h3>The user id is : <%= chat._id %></h3>
+    <p>user name is ; <%= chat.name %></p>
+    <form method="POST" action="/chats/<%= chat._id %>?_method=PUT" >
+        <input type="text" value="<%= chat.name %>"> 
+        <textarea name="name" ><%= chat.name %></textarea>
+        <textarea name="email" ><%= chat.email %></textarea>
+        <textarea name="phone" ><%= chat.phone %></textarea>
+        <textarea name="password" ><%= chat.password %></textarea>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>
